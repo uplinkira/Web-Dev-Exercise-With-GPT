@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>示例表单</title>
+</head>
+<body>
+    <h1>用户注册</h1>
+    <form action="/submit" method="post">
+        <label for="username">用户名：</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+
+        <label for="password">密码：</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+
+        <p>性别：</p>
+        <label>
+            <input type="radio" name="gender" value="male"> 男性
+        </label>
+        <label>
+            <input type="radio" name="gender" value="female"> 女性
+        </label>
+        <br>
+
+        <label>
+            <input type="checkbox" name="subscribe" value="yes"> 订阅电子邮件通知
+        </label>
+        <br>
+
+        <label for="country">选择您的国家：</label>
+        <select id="country" name="country">
+            <option value="usa">美国</option>
+            <option value="canada">加拿大</option>
+            <option value="uk">英国</option>
+        </select>
+        <br>
+
+        <input type="submit" value="注册">
+    </form>
+</body>
+</html>

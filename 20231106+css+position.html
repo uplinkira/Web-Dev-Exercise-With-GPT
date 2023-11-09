@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Example</title>
+    <style>
+        /* 中文注释：这是一个带有position属性的示例 */
+        /* English Comment: This is an example with the position property */
+        .container {
+            width: 400px;
+            height: 300px;
+            background-color: lightblue;
+            position: relative; /* 中文注释：相对定位 */
+                                /* English Comment: Relative positioning */
+            top: 0px;
+            left: 100px;
+        }
+
+        /* 中文注释：这是一个绝对定位的元素 */
+        /* English Comment: This is an absolutely positioned element */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            position: absolute; /* 中文注释：绝对定位 */
+                                /* English Comment: Absolute positioning */
+            top: 0px; /* 中文注释：距离顶部50像素 */
+                      /* English Comment: 50 pixels from the top */
+            left: 0px; /* 中文注释：距离左侧50像素 */
+                       /* English Comment: 50 pixels from the left */
+        }
+
+        /* 中文注释：这是一个固定定位的元素 */
+        /* English Comment: This is a fixed positioned element */
+        .fixed-box {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: fixed; /* 中文注释：固定定位 */
+                             /* English Comment: Fixed positioning */
+            bottom: 0px; /* 中文注释：距离顶部20像素 */
+                      /* English Comment: 20 pixels from the top */
+            right: 0px; /* 中文注释：距离右侧20像素 */
+                        /* English Comment: 20 pixels from the right */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+    <div class="fixed-box"></div>
+</body>
+</html>
