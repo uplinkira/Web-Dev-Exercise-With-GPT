@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Example</title>
+    <style>
+        /* 中文注释：这是一个带有position属性的示例 */
+        /* English Comment: This is an example with the position property */
+        .container {
+            width: 400px;
+            height: 300px;
+            background-color: lightblue;
+            position: relative; /* 中文注释：相对定位 */
+                                /* English Comment: Relative positioning */
+            top: 0px;
+            left: 100px;
+        }
+        /* 中文注释：这是一个绝对定位的元素 */
+        /* English Comment: This is an absolutely positioned element */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            position: absolute; /* 中文注释：绝对定位 */
+                                /* English Comment: Absolute positioning */
+            top: 0px; /* 中文注释：距离顶部50像素 */
+                      /* English Comment: 50 pixels from the top */
+            left: 0px; /* 中文注释：距离左侧50像素 */
+                       /* English Comment: 50 pixels from the left */
+        }
+        /* 中文注释：这是一个固定定位的元素 */
+        /* English Comment: This is a fixed positioned element */
+        .fixed-box {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: fixed; /* 中文注释：固定定位 */
+                             /* English Comment: Fixed positioning */
+            bottom: 0px; /* 中文注释：距离顶部20像素 */
+                      /* English Comment: 20 pixels from the top */
+            right: 0px; /* 中文注释：距离右侧20像素 */
+                        /* English Comment: 20 pixels from the right */
+        }
+        /* 创建sticky元素 */
+        /* Create a sticky element */
+        /*Still not showing after changing?*/
+        /*因为没有在body添加sticky元素，所以不会显示。*/
+        /*Because the sticky element is not added to the body, it will not be displayed.*/
+        /*帮我直接生成以下代码，让sticky元素粘在左边，高度为100px，宽度为100px，背景颜色为rgb(218, 182, 72)，内边距为50px，字体大小为20px，边框为3px实线紫色。*/
+        /*Help me generate the following code directly, so that the sticky element sticks to the left, the height is 100px, the width is 100px, the background color is rgb(218, 182, 72), the padding is 50px, the font size is 20px, and the border is 3px solid purple.*/
+        .sticky {
+            position: -webkit-sticky; 
+            position: sticky;
+            top: 0;
+            height: 100px;
+            width: 100px;
+            background-color: rgb(0, 106, 199);
+            padding: 5px;
+            font-size: 20px;
+            border: 3px solid #754caf;
+        }
+        /*padding是什么意思？*/
+        /*padding是CSS中的一个属性，用于设置元素的内边距。*/
+        /*padding is a property in CSS that is used to set the inner padding of an element.*/
+        /*border是什么意思？*/
+        /*border是CSS中的一个属性，用于设置元素的边框。*/
+        /*border is a property in CSS that is used to set the border of an element.*/
+        /*Note: Internet Explorer does not support sticky positioning. Safari requires a -webkit- prefix (see example below). You must also specify at least one of top, right, bottom or left for sticky positioning to work.注意：Internet Explorer 不支持粘性定位。 Safari 需要 -webkit- 前缀（请参见下面的示例）。您还必须至少指定 top 、 right 、 bottom 或 left 之一才能使粘性定位起作用。*/
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+    <div class="fixed-box"></div>
+    <div class="sticky">I am sticky!</div>
+</body>
+</html>
