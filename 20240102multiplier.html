@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>乘法表练习</title>
+</head>
+<body>
+    <h1>multiplication tables exerise</h1>
+    <p>
+        - Use loops to write the multiplication tables from 1 -to -10
+    </p>
+    <p>
+        - Use "console. log()"to write our your results Sample output
+    </p>
+<script>
+    for (let multiplier = 2; multiplier <= 10; multiplier++) {
+        // 外部循环：multiplier（乘数）从1开始到10
+        // Outer loop: starts 'multiplier' from 1 to 10
+
+        let line = "";
+        // 创建一个字符串变量line，用于存储每一行的结果
+        // Create a string variable 'line' to store the results of each row
+
+        for (let i = 1; i <= 10; i++) {
+            // 内部循环：i（被乘数）从1开始到10
+            // Inner loop: starts 'i' (multiplicand) from 1 to 10
+
+            line += (i * multiplier) + " ";
+            // line = line + (i * multiplier) + " ";
+            // 计算乘积并将其加到line字符串上，每个乘积后面加一个空格以分隔
+            // Calculate the product and append it to the 'line' string, adding a space after each product for separation
+        }
+
+        console.log(line);
+        // 打印出每一行的乘法表结果
+        // Print out the multiplication table result for each row
+    }
+</script>
+</body>
+</html>
+
+<!-- line += (i * multiplier) + " ";这行解释：
+Appending to the line String (line +=):附加到 line 字符串 ( line += )：
+line is a string variable that accumulates the products and spaces for each iteration of the inner loop. line 是一个字符串变量，用于累积内循环每次迭代的乘积和空间。
++= is a shorthand operator that appends the right-hand side expression to the current value of line. += 是一个速记运算符，它将右侧表达式附加到 line 的当前值。
+Each time the loop runs, a new product and a space are appended to line.每次循环运行时，都会将一个新乘积和一个空格附加到 line 中。
+For example, if line currently has "2 4 6 ", and the expression (i * multiplier) + " " results in "8 ", then line becomes "2 4 6 8 " after this operation.例如，如果 line 当前有 "2 4 6 " ，并且表达式 (i * multiplier) + " " 结果为 "8 " ，则 line 变为 "2 4 6 8 " 在此操作之后。 -->
+
+<!-- 我可以详细解释line变量是如何在循环中迭代的。我们以外部循环的第一次迭代（multiplier = 1）为例： I could explain in detail how the line variable is iterated within the loop. Let's take the first iteration of the outer loop ( multiplier = 1 ) as an example:
+
+初始状态：一开始，line被设置为空字符串 ""。Initial state: Initially, line is set to the empty string "" .
+
+第一次内部循环（i = 1）：First inner loop ( i = 1 ):
+
+i * multiplier 是 1 * 1，等于 1。
+
+这个结果（1）被转换为字符串并与一个空格串联，得到 "1 "。This result ( 1 ) is converted to a string and concatenated with a space, resulting in "1 " .
+
+line 变为 "1 "。
+
+第二次内部循环（i = 2）：Second inner loop ( i = 2 ):
+
+i * multiplier 是 2 * 1，等于 2。
+
+这个结果（2）被转换为字符串并与一个空格串联，得到 "2 "。This result ( 2 ) is converted to a string and concatenated with a space, resulting in "2 " .
+
+line 现在串联上 "2 "，变为 "1 2 "。 line is now concatenated with "2 " to become "1 2 " .
+第三次内部循环（i = 3）：Third inner loop ( i = 3 ):
+
+i * multiplier 是 3 * 1，等于 3。
+
+这个结果（3）被转换为字符串并与一个空格串联，得到 "3 "。This result ( 3 ) is converted to a string and concatenated with a space, resulting in "3 " .
+
+line 现在串联上 "3 "，变为 "1 2 3 "。 line is now concatenated with "3 " to become "1 2 3 " .
+
+这样的过程持续到内部循环结束（i = 10）：This process continues until the end of the inner loop ( i = 10 ):
+
+在最后一次迭代时，i 是 10，所以 i * multiplier 是 10 * 1，等于 10。On the last iteration, i is 10 , so i * multiplier is 10 * 1 , equal to 10 .
+
+这个结果（10）被转换为字符串并与一个空格串联，得到 "10 "。This result ( 10 ) is converted to a string and concatenated with a space, resulting in "10 " .
+
+line 现在串联上 "10 "，如果之前的结果是 "1 2 3 4 5 6 7 8 9 "，则最终结果变为 "1 2 3 4 5 6 7 8 9 10 "。 line is now concatenated with "10 " , and if the previous result was "1 2 3 4 5 6 7 8 9 " , the final result becomes "1 2 3 4 5 6 7 8 9 10 " .
+打印和重置：Print and reset:
+
+这时，line 包含了乘数为 1 的整个乘法表行，它被打印出来。At this time, line contains the entire multiplication table row with a multiplier of 1, which is printed.
+
+在外部循环的下一个迭代开始时，line 重新设置为空字符串，为新一行乘法表做准备。At the beginning of the next iteration of the outer loop, line is reset to the empty string in preparation for a new row of the multiplication table.
+
+通过这种方式，line 在每次外部循环的迭代中逐步构建一行乘法表，每次内部循环迭代都会添加一个新的乘积及其后的空格。In this way, line progressively builds a row of the multiplication table on each iteration of the outer loop, adding a new product followed by a space on each iteration of the inner loop. -->

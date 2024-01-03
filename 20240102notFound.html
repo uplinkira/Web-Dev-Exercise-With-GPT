@@ -1,0 +1,23 @@
+hello from Yaqui's debug file
+
+<script>
+    var notFound = true;
+    let counter = 0;
+
+    // search a sepecific number
+    while(notFound){
+        if (counter === 886) {
+            notFound = false;
+            console.log('found' + counter);//如何把显示改成随counter变化的数字？
+        } else {
+            console.log('still looking');
+        }
+        counter ++;
+        //为什么要有counter ++;这一行？//en: why do we need counter ++;?
+        //解释：如果没有这一行，counter就会一直是0，就会一直是notFound，就会一直是still looking
+        //en: if there is no counter ++; then counter will always be 0, then notFound will always be true, then it will always be still looking
+    }
+    //如何把显示console.log('found 5000')的5000改成随counter变化的数字？
+    //en: how to change the 5000 in console.log('found 5000') to a number that changes with counter?
+
+</script>

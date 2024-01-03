@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--character_set = Specifies the document character encoding as UTF-8-->
+<!--怎么理解<meta>标签?-->
+<!--https://www.w3schools.com/tags/tag_meta.asp-->
+<!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--中英解释这行-->
+<!--"viewport" represents the visible area of a web page that the user sees in the browser, typically referring to the webpage's visible area.表示用户在浏览器中看到的可见区域，通常指的是网页的可视区域。-->
+<!--Sets the viewport's width to the device's width-->
+<!--it establishes the initial scaling factor at 1.0 to prevent automatic scaling of the page to an inappropriate size for the device. 它还将初始缩放比例设置为1.0，以防止页面自动缩放到不适合设备的大小。-->
+<title>Circle Exercise</title>
+<style>
+  .circle-container/*.circle-container and .circle: These are CSS class selectors used to define style rules. .circle-container is used to contain multiple circles, while .circle is used to define the style of a circle.circle-container 和 .circle：这些是CSS类选择器，用于定义样式规则。https://www.w3schools.com/cssref/sel_class.asp*/ {
+    position: relative; /* 相对定位父元素 */
+    width: 300px;
+    height: 300px;
+    margin: 150px auto; /* 在水平方向上居中 */
+    background-color: rgb(157, 180, 173);
+  }
+  .circle {
+    width: 100px; /* 圆的宽度 */
+    height: 100px; /* 圆的高度 */
+    background-color: #000; /* 圆的颜色，这里是黑色 */
+    border-radius: 50%; /* 边框半径为50%，制造圆形效果 */
+    position: absolute; /* 绝对定位，相对于父元素 */
+    /* 下面的内容将用于每个圆的具体定位 */
+  }
+</style>
+</head>
+<body>
+
+<div class="circle-container">
+  <!--circle-container是什么意思-->
+  <!--整体移动位置大小-->
+  <!--arrange and display them within a container. This container serves as a parent element containing multiple child elements, allowing us to organize multiple circular elements within a unified area.在一个容器内对它们进行排列和显示。这个容器充当了一个包含多个子元素的父元素，使我们能够将多个圆形元素组织在一个统一的区域内。-->
+  <!-- 下面是每个圆的具体位置，我们将添加多个带有不同颜色和位置的 .circle 类的 div 元素 -->
+  <!-- The following are the specific positions for each circle, we will add multiple divs with the .circle class with different colors and positions -->
+  <!--怎么调整以下代码，让10个小圆按照设置路径围绕成一个大圆的轮廓？-->
+  <div class="circle" style="background-color: #0000FF; left: 50px; top: 0;"></div> <!-- 蓝色圆 -->
+  <div class="circle" style="background-color: #FF0000; left: 100px; top: 0;"></div> <!-- 红色圆 -->
+  <div class="circle" style="background-color: #00FF00; left: 150px; top: 50px;"></div> <!-- 绿色圆 -->
+  <div class="circle" style="background-color: #0000FF; left: 150px; top: 150px;"></div> <!-- 蓝色圆 -->
+  <div class="circle" style="background-color: #FFFF00; left: 100px; top: 200px;"></div> <!-- 黄色圆 -->
+  <div class="circle" style="background-color: #00FFFF; left: 0; top: 150px;"></div> <!-- 青色圆 -->
+  <div class="circle" style="background-color: #FF00FF; left: 0; top: 50px;"></div> <!-- 品红色圆 -->
+  <div class="circle" style="background-color: #FF0000; left: 50px; top: 100px;"></div> <!-- 红色圆 -->
+  <div class="circle" style="background-color: #00FF00; left: 100px; top: 150px;"></div> <!-- 绿色圆 -->
+</div>
+</body>
+</html>

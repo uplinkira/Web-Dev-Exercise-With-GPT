@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Circle Exercise</title>
+<style>
+  .circle-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 150px auto;
+  }
+  .circle {
+    width: 30px; /* 调整小圆的宽度 */
+    height: 30px; /* 调整小圆的高度 */
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    /* 下面的 left 和 top 属性将根据大圆的轮廓进行计算 */
+  }
+</style>
+</head>
+<body>
+
+<div class="circle-container">
+  <!-- 使用 JavaScript 计算并创建多个小圆 -->
+  <script>
+    const container = document.querySelector('.circle-container');
+    const radius = 100; // 大圆的半径
+    const circleCount = 10; // 小圆的数量
+
+    for (let i = 0; i < circleCount; i++) {
+      const angle = (i / circleCount) * 2 * Math.PI;
+      const x = radius * Math.cos(angle) + radius; // X 坐标
+      const y = radius * Math.sin(angle) + radius; // Y 坐标
+
+      const circle = document.createElement('div');
+      circle.className = 'circle';
+      circle.style.left = x + 'px';
+      circle.style.top = y + 'px';
+      container.appendChild(circle);
+    }
+  </script>
+</div>
+
+</body>
+</html>

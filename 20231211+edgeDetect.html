@@ -1,0 +1,78 @@
+<head>
+<title>carEdgeDetect</title>
+<style>
+.car {
+    width: 50px;
+    height: 50px;
+    background: greenyellow;
+    border-radius: 30%;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    z-index: 2;
+}
+.core {
+    width: 10px;
+    height: 10px;
+    background: rgb(0, 0, 0);
+    border-radius: 30%;
+    position: relative;
+    right: -25px;
+    bottom: -25px;
+    z-index: 3;
+}
+</style>
+</head>
+<body>
+<div class="car" id="car">
+    <div class="core"></div>
+</div>
+</body>
+<script>
+// 1D edge Detection
+var velocityX = 5; // Adjust the speed as needed
+var positionX = 0; // Initial position
+var directionX = 1; // 1 for right, -1 for left
+
+var velocityY = 2; // Adjust the speed as needed
+var positionY = 0; // Initial position
+var directionY = 1; // 1 for right, -1 for left
+
+
+var car = document.getElementById('car');
+
+function moveCarHorizon() {
+  positionX += velocityX * directionX;
+  //position = position + (velocity * direction)
+  car.style.right = positionX + 'px';
+  //left/right更改则会改变元素的初始位置
+    // the line sets the left CSS property of the car element to the current position value followed by 'px', effectively moving the car element horizontally on the page by changing its left position.该行将 car 元素的 left CSS 属性设置为当前 position 值，后跟“px”，从而有效地移动 car 元素通过更改其左侧位置在页面上水平移动。    
+  // Check if the ball has reached the left or right edge
+  if (positionX <= 0 || positionX >= (window.innerWidth - car.clientWidth)) {
+    directionX *= -1; // Reverse the direction
+  }
+
+  // Schedule the next execution
+  setTimeout(moveCarHorizon, 30); // Adjust the interval as needed
+}
+
+function moveCarVertical() {
+  positionY += velocityY * directionY;
+  //position = position + (velocity * direction)
+  car.style.bottom = positionY + 'px';
+  //top/bottom更改则会改变元素的初始位置
+
+  // Check if the ball has reached the left or right edge
+  if (positionY <= 0 || positionY >= (window.innerHeight - car.clientHeight)) {
+    directionY *= -1; // Reverse the direction
+  }
+
+  // Schedule the next execution
+  setTimeout(moveCarVertical, 30); // Adjust the interval as needed
+}
+
+// Start the ball movement
+moveCarHorizon();
+moveCarVertical();
+
+</script>

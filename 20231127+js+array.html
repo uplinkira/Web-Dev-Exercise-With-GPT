@@ -1,0 +1,58 @@
+<script>
+    var numberVar = [
+        [5, 4, 4, 5],[1, 2, 3, 44]
+    ];
+
+    console.log(numberVar);
+    console.log(numberVar[0]);
+    console.log(numberVar[1][3]);
+    // 表明2th array的[3]=4th
+    // (Print the fourth element of the second sub-array)
+
+    // Define a function for modifying elements in an array.
+    function arrayModifyVar(){
+        numberVar[1][3] = 99;
+        // 你只是想要修改数组中的一个值，而不是创建一个新的多维数组(不需要重新声明一个新数组let number[1][3] )。you just want to modify a value in the array, not create a new multidimensional array.
+        // no spaces between "number" and "index"
+        console.log(numberVar[1][3]);
+    }
+
+    arrayModifyVar();
+
+    function arrayModifyVarRepeat(){
+        numberVar[1][3] = 66;
+        // 你只是想要修改数组中的一个值，而不是创建一个新的多维数组(不需要重新声明一个新数组let number[1][3] )。you just want to modify a value in the array, not create a new multidimensional array.
+        // no spaces between "number" and "index"
+        console.log(numberVar[1][3]);
+    }
+
+    arrayModifyVarRepeat();
+
+    let numberLet = [
+        [5, 4, 4, 5],[1, 2, 3, 44]
+    ];
+    console.log(numberLet);
+    console.log(numberLet[0]);
+    console.log(numberLet[1][3]);
+
+    function arrayModifyLet(){
+        numberLet[1][3] = 99;
+        // 你只是想要修改数组中的一个值，而不是创建一个新的多维数组(不需要重新声明一个新数组let number[1][3] )。you just want to modify a value in the array, not create a new multidimensional array.
+        // no spaces between "number" and "index"
+        console.log(numberLet[1][3]);
+    }
+
+    arrayModifyLet();
+
+    function arrayModifyLetRe(){
+        numberLet[1][3] = 66;
+        // 你只是想要修改数组中的一个值，而不是创建一个新的多维数组(不需要重新声明一个新数组let number[1][3] )。you just want to modify a value in the array, not create a new multidimensional array.
+        // no spaces between "number" and "index"
+        console.log(numberLet[1][3]);
+    }
+
+    arrayModifyLetRe();
+</script>
+
+
+//结论，let和Var都可以单独修改数值，因为不是重新声明数值

@@ -1,0 +1,39 @@
+<script>
+
+// const 
+const PI = 3.14159265359;
+console.log(PI); // 输出 3.14159265359
+
+// 不能重新赋值给常量
+// PI = 4; // 会引发错误
+
+if (true) {
+  const max = 100;
+  console.log(max); // 输出 100
+}
+
+// 不能重复声明常量
+// const PI = 3.14; // 会引发错误
+
+    // 在网页浏览器中打开文件，进入console中查看输出结果
+    // Open the file in a web browser, and then access the console to view the output results.
+    
+    // 使用 let 声明变量
+    let a = 10;
+    if (a > 5) {
+    let b = 20;
+    console.log(b); // 输出 20
+    }
+    console.log(a); // 输出 10
+    console.log(b); // 会引发错误，b 在外部不可见
+
+    // 使用 var 声明变量
+    var x = 5;
+    if (x > 2) {
+    var y = 15;
+    console.log(y); // 输出 15
+    }
+    console.log(x); // 输出 5
+    console.log(y); // 输出 15，y 在外部也可见
+
+</script>

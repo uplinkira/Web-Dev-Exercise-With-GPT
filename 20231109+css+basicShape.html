@@ -1,0 +1,27 @@
+<!--creat a basic shape-->
+<div style="
+    z-index: 5;
+    position: absolute;
+    left: 100px;
+    top: 200px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: black"></div>
+<!--next challenge is to get more creative with shapes. In this exercise, you need to layer shapes of different colors, dimensions, and at different z positions-->
+<!--使用更简洁的更有效率的代码，可以把上面的基本形状重复10个并围成重叠的一个圈，并赋予不同的颜色，尺寸-->
+<!--这里的代码是一个循环，循环10次，每次都会创建一个新的div元素，然后把它添加到body元素中-->
+<!--中英双语注释let是什么意思？-->
+<!--let是一个关键字，用于声明一个变量，这个变量的作用域是块级作用域，它的值可以被修改let is a keyword used to declare a variable, the scope of this variable is block-level scope, and its value can be modified-->
+<!--中英注释what is block-level scope?-->
+<!--块级作用域是指在代码块中声明的变量，它们只能在该代码块中访问，而不能在代码块外访问。Block-level scope refers to variables declared in a code block, they can only be accessed in that code block, not outside the code block.-->
+<!--生成循环代码-->
+for (let i = 0; i < 10; i++) {
+    const div = document.createElement('div');
+    document.body.appendChild(div);
+}
+<!--中英双语注释what is the meaning of the code?-->
+<!--这段代码是一个for循环，它会执行10次，每次都会创建一个新的div元素，然后把它添加到body元素中-->
+<!--This code is a for loop, it will be executed 10 times, each time it will create a new div element, and then add it to the body element-->
+
+
