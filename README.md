@@ -1,2 +1,2 @@
-# WebDevExerciseWithGPT
-This repository records how a zero-based programmer uses large models to understand how to learn web development in 2023.
+# Web Dev Exercise With GPT3.5/4
+This repository documents how a designer, with the assistance of large language models, independently learned web development from 2023 to 2024.
