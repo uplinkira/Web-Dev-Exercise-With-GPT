@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Update function to animate the balls
     function updateBalls() {
         balls.forEach(function(ball) {
-            // 在漫步概率下进行速度和方向更改
+            // 在漫步概率下进行速度和方向更改//需要改进
             if (enableRandomWalk && Math.random() < randomWalkProbability) {
                 // 平滑速度和方向更改，使用插值
                 const velocityChangeX = getRandomVelocityChange();
