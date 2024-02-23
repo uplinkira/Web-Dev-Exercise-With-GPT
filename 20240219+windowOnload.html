@@ -1,0 +1,20 @@
+<html>
+    <script>
+        // window.onload = function() {
+        const tag = document.getElementById('tag1');
+        var time = 100;
+        const getTime = () => {
+            time = time - 1;
+            tag.innerHTML = 'Goodbye Aliens: ship leaves in' + time + 'seconds';
+        };
+        setInterval(getTime, 1000);
+        // }
+        // 如果没有window.onload，那么这个script会在html加载完毕后立即执行，此时tag1还没有被加载，所以会报错
+        // en: if there is no window.onload, the script will be executed immediately after the html is loaded, at this time tag1 has not been loaded, so an error will be reported
+    </script>
+    <body>
+        <div>
+            <h1 id="tag1">Hello Earthling</h1>
+        </div>
+    </body>
+</html>
